@@ -24,15 +24,15 @@ public class UndirectedGraph {
     }
 
 
-    public void BFS(int source){ // source is starting point, usually starting at 0
+    public void BFS(int source){ 
         boolean[] visited = new boolean[V];
 
         Queue<Integer> q = new LinkedList<>();
         visited[source] = true;
-        q.offer((source)); //пытается добавить оbj в очередь. Возвращает true, если оbj добавлен, и false в противном случае.
+        q.offer((source)); 
 
         while(!q.isEmpty()){
-            int u = q.poll(); // pool()-возвращает элемент из головы очереди и удаляет его
+            int u = q.poll(); 
             System.out.println(u + " ");
 
             for (int v : adj[u]) {
